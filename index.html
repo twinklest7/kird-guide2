@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국가 과학기술경영진 과정(3차) 참가안내문</title>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>* { box-sizing: border-box; margin: 0; padding: 0; }</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+const { useState, useEffect } = React;
+"use strict";
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+var DEFAULT_DATA = {
+  courseName: "국가 과학기술경영진 과정",
+  cohort: "3차",
+  year: "2026",
+  hashtags: ["#경영진", "#리더십"],
+  lastUpdated: "2026. 6. 16.",
+  objectives: ["과기환경 변화에 선제적으로 대응 가능한 거시적·통합적 리더십을 확보한다.", "연구기관 경영에 필요한 노하우를 습득하고 출연(연) 간 네트워크를 강화한다."],
+  overview: {
+    target: "출연(연) 및 공공연구기관 부원장(출연연발전위원회 위원), 26명",
+    period: "2026. 6. 16.(화), 5시간 40분",
+    location: "(대전) KIRD 대전교육센터 11층 대강의장",
+    cost: "4,000,000원 (총 5회, 해외연수 포함)",
+    organizer: "국가과학기술인력개발원, 국가과학기술연구회"
+  },
+  prework: [{
+    icon: "🎧",
+    title: "오디오 브리핑 제공",
+    desc: "교육에서 논의할 주제 관련 오디오 브리핑이 별도 메일로 송부될 예정입니다."
+  }],
+  schedule: [{
+    day: 1,
+    date: "6.16(화)",
+    label: "Day 1",
+    sessions: [{
+      time: "10:00~10:30",
+      min: "30분",
+      title: "오전교육 등록 및 오리엔테이션",
+      desc: "",
+      tag: ""
+    }, {
+      time: "10:30~11:30",
+      min: "60분",
+      title: "기술을 어떻게 국가 경쟁력으로 바꾸는가",
+      desc: "김명환 단장 (차세대 이차전지 전략연구단, 前 LG에너지솔루션 사장)",
+      tag: "경영 솔루션(성과관리)"
+    }, {
+      time: "11:30~12:30",
+      min: "60분",
+      title: "국가 R&D 전략을 어떻게 조직으로 가져올 것인가?",
+      desc: "",
+      tag: "라운드테이블(발제 및 토론)"
+    }, {
+      time: "12:30~13:30",
+      min: "60분",
+      title: "점심식사 및 네트워킹",
+      tag: ""
+    }, {
+      time: "13:30~14:00",
+      min: "30분",
+      title: "오후교육 등록",
+      tag: ""
+    }, {
+      time: "14:00~15:30",
+      min: "90분",
+      title: "자율적 문화, 투명한 소통으로 기술 혁신을 이끈 SAP의 경영비결",
+      desc: "오용석 상무 (SAP KOREA, 기업문화총괄)",
+      tag: "리더십 교육"
+    }, {
+      time: "15:30~15:40",
+      min: "10분",
+      title: "설문조사 및 마무리",
+      tag: ""
+    }]
+  }],
+  completion: ["교육시간의 참석률 80% 이상, 설문조사 완료 시 수료, 80% 미만 시 자동 미수료 처리됩니다.", "교육만족도 설문조사는 교육종료 후, 서면으로 실시합니다.", "교육기간 중 불참 사유 발생시 반드시 교육과정 담당자와 사전 협의 바랍니다. (허가원 작성 必)", "수료증은 교육종료 후 KIRD 알파캠퍼스(alpha-campus.kr) 로그인-마이페이지에서 확인 및 출력 가능합니다."],
+  directions: {
+    address: "대전 유성구 대덕대로 593, 대덕테크비즈센터(TBC) 11층 국가과학기술인력개발원",
+    car: [{
+      route: "호남고속지선",
+      detail: "호남고속지선(북대전IC) → 북대전IC 네거리 → 도룡삼거리 → 대덕테크비즈센터(TBC)"
+    }],
+    parking: ["대덕테크비즈센터(TBC) 건물 지하주차장", "공영주차장(상) : 대전 유성구 도룡동 385-1", "공영주차장(하) : 대전 유성구 도룡동 395-10"],
+    parkingNote: "TBC 지하주차장이 매우 협소하므로, 주차공간 없을 시 공영주차장 이용 부탁드립니다. (교육생에 한하여 주차할인 등록)",
+    ktx: [{
+      from: "서울역",
+      time: "1시간 6분"
+    }, {
+      from: "인천공항역",
+      time: "1시간 56분"
+    }, {
+      from: "천안아산역",
+      time: "25분"
+    }, {
+      from: "수원역",
+      time: "1시간 7분"
+    }, {
+      from: "동대구역",
+      time: "41분"
+    }, {
+      from: "부산역",
+      time: "1시간 20분"
+    }],
+    ktxNote: "도착: 대전역 → 택시 이용 (35분 소요)",
+    bus: [{
+      from: "서울 (경부/호남)",
+      time: "1시간 50분"
+    }],
+    busNote: "도착: 도룡정류소 → 도보 이용 (6분 소요)"
+  },
+  contacts: [{
+    role: "교육내용",
+    name: "제갈란",
+    phone: "043-251-7047",
+    email: "lanjegal@kird.re.kr"
+  }, {
+    role: "교육참여",
+    name: "이창희",
+    phone: "043-251-7110",
+    email: "chlee@kird.re.kr"
+  }]
+};
+var TABS = [{
+  id: "course",
+  label: "과정·일정",
+  icon: "📋"
+}, {
+  id: "access",
+  label: "교통·안내",
+  icon: "🚌"
+}];
+var tagColors = {
+  "경영 솔루션(성과관리)": {
+    bg: "#fdf6e3",
+    fg: "#6b4c00"
+  },
+  "라운드테이블(발제 및 토론)": {
+    bg: "#fdf6e3",
+    fg: "#6b4c00"
+  },
+  "리더십 교육": {
+    bg: "#e8eef6",
+    fg: "#1a365d"
+  }
+};
+function Guide() {
+  var _useState = useState(null),
+    _useState2 = _slicedToArray(_useState, 2),
+    data = _useState2[0],
+    setData = _useState2[1];
+  var _useState3 = useState("course"),
+    _useState4 = _slicedToArray(_useState3, 2),
+    tab = _useState4[0],
+    setTab = _useState4[1];
+  var _useState5 = useState(0),
+    _useState6 = _slicedToArray(_useState5, 2),
+    activeDay = _useState6[0],
+    setActiveDay = _useState6[1];
+  var _useState7 = useState(true),
+    _useState8 = _slicedToArray(_useState7, 2),
+    loading = _useState8[0],
+    setLoading = _useState8[1];
+  useEffect(function () {
+    setData(DEFAULT_DATA);
+    setLoading(false);
+  }, []);
+  if (loading || !data) return /*#__PURE__*/React.createElement("div", {
+    style: {
+      minHeight: "100vh",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      background: "#f7f6f3",
+      fontFamily: "'Noto Sans KR', sans-serif",
+      color: "#999"
+    }
+  }, "\uBD88\uB7EC\uC624\uB294 \uC911...");
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      minHeight: "100vh",
+      background: "#f7f6f3",
+      fontFamily: "'Noto Sans KR', sans-serif"
+    }
+  }, /*#__PURE__*/React.createElement("link", {
+    href: "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap",
+    rel: "stylesheet"
+  }), /*#__PURE__*/React.createElement("header", {
+    style: {
+      background: "linear-gradient(135deg, #2c5f8a 0%, #3a7cb8 40%, #c9a84c 100%)",
+      padding: "36px 24px 28px",
+      position: "relative"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "absolute",
+      inset: 0,
+      background: "radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 60%)",
+      pointerEvents: "none"
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "relative"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "11px",
+      color: "rgba(255,255,255,0.7)",
+      fontWeight: 500,
+      letterSpacing: "2px",
+      marginBottom: "8px"
+    }
+  }, "KIRD \uB9AC\uB354\uC2ED \uACFC\uC815"), /*#__PURE__*/React.createElement("h1", {
+    style: {
+      color: "#fff",
+      fontSize: "24px",
+      fontWeight: 900,
+      margin: "0 0 4px",
+      lineHeight: 1.3
+    }
+  }, data.courseName, " (", data.cohort, ")"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: "8px",
+      marginTop: "12px",
+      flexWrap: "wrap"
+    }
+  }, data.hashtags.map(function (h, i) {
+    return /*#__PURE__*/React.createElement("span", {
+      key: i,
+      style: {
+        background: "rgba(255,255,255,0.2)",
+        color: "#fff",
+        fontSize: "11px",
+        padding: "3px 10px",
+        borderRadius: "12px"
+      }
+    }, h);
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      background: "rgba(255,255,255,0.25)",
+      color: "#fff",
+      fontSize: "11px",
+      padding: "3px 10px",
+      borderRadius: "12px",
+      fontWeight: 700
+    }
+  }, data.year)))), /*#__PURE__*/React.createElement("nav", {
+    style: {
+      display: "flex",
+      background: "#fff",
+      borderBottom: "1px solid #e8e4dc",
+      position: "sticky",
+      top: 0,
+      zIndex: 10
+    }
+  }, TABS.map(function (t) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: t.id,
+      onClick: function onClick() {
+        return setTab(t.id);
+      },
+      style: {
+        flex: 1,
+        padding: "14px 0",
+        border: "none",
+        background: "none",
+        cursor: "pointer",
+        fontSize: "13px",
+        fontWeight: tab === t.id ? 700 : 400,
+        color: tab === t.id ? "#2c5f8a" : "#888",
+        borderBottom: tab === t.id ? "3px solid #2c5f8a" : "3px solid transparent",
+        fontFamily: "inherit",
+        transition: "all 0.15s"
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        marginRight: "4px"
+      }
+    }, t.icon), t.label);
+  })), /*#__PURE__*/React.createElement("main", {
+    style: {
+      padding: "20px 20px 40px",
+      maxWidth: "640px",
+      margin: "0 auto"
+    }
+  }, tab === "course" && /*#__PURE__*/React.createElement(CourseTab, {
+    data: data,
+    activeDay: activeDay,
+    setActiveDay: setActiveDay
+  }), tab === "access" && /*#__PURE__*/React.createElement(AccessTab, {
+    data: data
+  })), /*#__PURE__*/React.createElement("footer", {
+    style: {
+      textAlign: "center",
+      padding: "16px",
+      fontSize: "11px",
+      color: "#bbb",
+      borderTop: "1px solid #eee"
+    }
+  }, "\uCD5C\uC885 \uC5C5\uB370\uC774\uD2B8: ", data.lastUpdated, " \xB7 KIRD \uAD6D\uAC00\uACFC\uD559\uAE30\uC220\uC778\uB825\uAC1C\uBC1C\uC6D0"));
+}
+
+/* ─── SHARED ─── */
+
+function Card(_ref) {
+  var children = _ref.children,
+    style = _ref.style;
+  return /*#__PURE__*/React.createElement("div", {
+    style: _objectSpread({
+      background: "#fff",
+      borderRadius: "12px",
+      padding: "20px",
+      marginBottom: "16px",
+      boxShadow: "0 1px 3px rgba(0,0,0,0.04)"
+    }, style)
+  }, children);
+}
+function Banner(_ref2) {
+  var icon = _ref2.icon,
+    title = _ref2.title,
+    sub = _ref2.sub;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: "linear-gradient(135deg, #1b2d45 0%, #2c5f8a 100%)",
+      borderRadius: "12px",
+      padding: "16px 20px",
+      marginBottom: "20px",
+      position: "relative",
+      overflow: "hidden",
+      display: "flex",
+      alignItems: "center",
+      gap: "12px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "absolute",
+      top: 0,
+      right: 0,
+      bottom: 0,
+      width: "40%",
+      background: "radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.1) 0%, transparent 70%)",
+      pointerEvents: "none"
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "20px",
+      position: "relative",
+      zIndex: 1
+    }
+  }, icon), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "relative",
+      zIndex: 1
+    }
+  }, /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontSize: "15px",
+      fontWeight: 800,
+      color: "#fff",
+      margin: 0
+    }
+  }, title), sub && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "11px",
+      color: "rgba(255,255,255,0.45)",
+      margin: "2px 0 0"
+    }
+  }, sub)));
+}
+function Divider() {
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: "1px",
+      background: "#e8e4dc",
+      margin: "24px 0"
+    }
+  });
+}
+function SubTitle(_ref3) {
+  var children = _ref3.children;
+  return /*#__PURE__*/React.createElement("h3", {
+    style: {
+      fontSize: "16px",
+      fontWeight: 800,
+      color: "#1a1a1a",
+      margin: "0 0 14px",
+      borderLeft: "3px solid #2c5f8a",
+      paddingLeft: "10px"
+    }
+  }, children);
+}
+
+/* ─── TAB 1: 과정·일정 ─── */
+
+function CourseTab(_ref4) {
+  var data = _ref4.data,
+    activeDay = _ref4.activeDay,
+    setActiveDay = _ref4.setActiveDay;
+  var d = data.overview;
+  var day = data.schedule[activeDay];
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Banner, {
+    icon: "\uD83D\uDCCB",
+    title: "\uACFC\uC815\xB7\uC77C\uC815",
+    sub: "\uAD50\uC721\uBAA9\uD45C, \uACFC\uC815\uAC1C\uC694, \uC77C\uC815\uC744 \uC548\uB0B4\uD569\uB2C8\uB2E4"
+  }), data.prework && /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: "#f0f6fc",
+      borderRadius: "12px",
+      padding: "14px 16px",
+      marginBottom: "20px",
+      border: "1px solid #d6e4f0"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "12px",
+      fontWeight: 800,
+      color: "#2c5f8a",
+      marginBottom: "10px"
+    }
+  }, "\uD83D\uDCDA \uC0AC\uC804\uD559\uC2B5\uC790\uB8CC"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "6px"
+    }
+  }, data.prework.map(function (a, i) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      style: {
+        display: "flex",
+        gap: "10px",
+        alignItems: "flex-start",
+        background: "#fff",
+        borderRadius: "8px",
+        padding: "10px 12px",
+        borderLeft: "3px solid #2c5f8a"
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "18px",
+        flex: "none",
+        lineHeight: 1.2
+      }
+    }, a.icon), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "13px",
+        fontWeight: 700,
+        color: "#1a365d",
+        lineHeight: 1.4
+      }
+    }, a.title), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "11px",
+        color: "#777",
+        marginTop: "3px",
+        lineHeight: 1.5
+      }
+    }, a.desc)));
+  }))), /*#__PURE__*/React.createElement(SubTitle, null, "\uAD50\uC721\uBAA9\uD45C"), /*#__PURE__*/React.createElement(Card, null, data.objectives.map(function (o, i) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      style: {
+        display: "flex",
+        gap: "8px",
+        marginBottom: i < data.objectives.length - 1 ? "10px" : 0,
+        fontSize: "14px",
+        color: "#333",
+        lineHeight: 1.6
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: "#2c5f8a",
+        fontWeight: 700,
+        flex: "none"
+      }
+    }, "\u2022"), /*#__PURE__*/React.createElement("span", null, o));
+  })), /*#__PURE__*/React.createElement(SubTitle, null, "\uACFC\uC815\uAC1C\uC694"), /*#__PURE__*/React.createElement(Card, null, [["대상", d.target], ["기간", d.period], ["장소", d.location], ["비용", d.cost], ["주관", d.organizer]].map(function (_ref5, i) {
+    var _ref6 = _slicedToArray(_ref5, 2),
+      l = _ref6[0],
+      v = _ref6[1];
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      style: {
+        display: "flex",
+        gap: "12px",
+        marginBottom: "10px",
+        fontSize: "13px",
+        lineHeight: 1.6
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        flex: "none",
+        width: "48px",
+        fontWeight: 700,
+        color: "#2c5f8a"
+      }
+    }, l), /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: "#333"
+      }
+    }, v));
+  })), /*#__PURE__*/React.createElement(Divider, null), /*#__PURE__*/React.createElement(SubTitle, null, "\uAD50\uC721\uC77C\uC815"), data.schedule.length > 1 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: "6px",
+      marginBottom: "16px"
+    }
+  }, data.schedule.map(function (d, i) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: i,
+      onClick: function onClick() {
+        return setActiveDay(i);
+      },
+      style: {
+        flex: 1,
+        padding: "10px 8px",
+        border: "none",
+        borderRadius: "10px",
+        cursor: "pointer",
+        background: activeDay === i ? "#2c5f8a" : "#eee",
+        color: activeDay === i ? "#fff" : "#666",
+        fontSize: "13px",
+        fontWeight: activeDay === i ? 700 : 400,
+        fontFamily: "inherit"
+      }
+    }, /*#__PURE__*/React.createElement("div", null, d.label), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "11px",
+        opacity: 0.8,
+        marginTop: "2px"
+      }
+    }, d.date));
+  })), data.schedule.length === 1 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "inline-block",
+      fontSize: "12px",
+      fontWeight: 700,
+      color: "#fff",
+      background: "#2c5f8a",
+      padding: "6px 14px",
+      borderRadius: "8px",
+      marginBottom: "12px"
+    }
+  }, day.date), /*#__PURE__*/React.createElement(Card, {
+    style: {
+      padding: "12px 16px"
+    }
+  }, day.sessions.map(function (s, i) {
+    var isBreak = !s.tag && (s.title.includes("식") || s.title.includes("등록") || s.title.includes("쉬는") || s.title.includes("오리엔") || s.title.includes("설문") || s.title.includes("퇴소"));
+    var tc = s.tag ? tagColors[s.tag] || {
+      bg: "#f0f0f0",
+      fg: "#555"
+    } : null;
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      style: {
+        display: "flex",
+        gap: "10px",
+        padding: "10px 0",
+        borderBottom: i < day.sessions.length - 1 ? "1px solid #f5f3ef" : "none"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        flex: "none",
+        width: "88px"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "12px",
+        color: "#1a1a1a",
+        fontWeight: 500,
+        fontVariantNumeric: "tabular-nums"
+      }
+    }, s.time), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "10px",
+        color: "#1a1a1a"
+      }
+    }, s.min)), /*#__PURE__*/React.createElement("div", {
+      style: {
+        flex: 1
+      }
+    }, isBreak ? /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "12px",
+        fontWeight: 400,
+        color: "#1a1a1a",
+        lineHeight: 1.5
+      }
+    }, s.title) : /*#__PURE__*/React.createElement("span", {
+      style: {
+        display: "inline-block",
+        fontSize: "13px",
+        fontWeight: 700,
+        color: "#1a1a1a",
+        lineHeight: 1.5,
+        background: tc ? tc.bg : "#e8eef6",
+        padding: "2px 8px",
+        borderRadius: "6px"
+      }
+    }, s.title), s.desc && /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: "12px",
+        color: "#1a1a1a",
+        marginTop: "4px",
+        lineHeight: 1.5
+      }
+    }, s.desc), tc && /*#__PURE__*/React.createElement("span", {
+      style: {
+        display: "inline-block",
+        marginTop: "6px",
+        fontSize: "10px",
+        padding: "2px 8px",
+        borderRadius: "8px",
+        background: tc.bg,
+        color: tc.fg,
+        fontWeight: 600
+      }
+    }, s.tag)));
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "11px",
+      color: "#999",
+      textAlign: "center"
+    }
+  }, "\u203B \uC0C1\uAE30 \uB0B4\uC6A9\uC740 \uC0AC\uC815\uC5D0 \uB530\uB77C \uBCC0\uACBD\uB420 \uC218 \uC788\uC2B5\uB2C8\uB2E4."));
+}
+
+/* ─── TAB 2: 교통·안내 ─── */
+
+function AccessTab(_ref7) {
+  var data = _ref7.data;
+  var d = data.directions;
+  return /*#__PURE__*/React.createElement(React.Fragment, null,
+    /*#__PURE__*/React.createElement(Banner, {
+      icon: "\uD83D\uDE8C",
+      title: "\uAD50\uD1B5\xB7\uC548\uB0B4",
+      sub: "\uAD50\uC721\uC7A5\uC5D0 \uC624\uC2DC\uB294 \uAE38\uACFC \uC218\uB8CC \uC548\uB0B4\uC785\uB2C8\uB2E4"
+    }),
+    /*#__PURE__*/React.createElement(SubTitle, null, "\uC8FC\uC18C"),
+    /*#__PURE__*/React.createElement(Card, null,
+      /*#__PURE__*/React.createElement("div", {
+        style: {
+          fontSize: "13px",
+          color: "#1a1a1a",
+          lineHeight: 1.6,
+          fontWeight: 500
+        }
+      }, d.address)
+    ),
+    /*#__PURE__*/React.createElement(SubTitle, null, "\uC2B9\uC6A9\uCC28 \uC774\uC6A9"),
+    /*#__PURE__*/React.createElement(Card, null, d.car.map(function (c, i) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: i,
+        style: {
+          marginBottom: i < d.car.length - 1 ? "10px" : 0
+        }
+      },
+        /*#__PURE__*/React.createElement("div", {
+          style: {
+            fontSize: "12px",
+            fontWeight: 700,
+            color: "#1a365d",
+            marginBottom: "4px"
+          }
+        }, c.route),
+        /*#__PURE__*/React.createElement("div", {
+          style: {
+            fontSize: "12px",
+            color: "#1a1a1a",
+            lineHeight: 1.6
+          }
+        }, c.detail)
+      );
+    })),
+    /*#__PURE__*/React.createElement(SubTitle, null, "\uC8FC\uCC28\uC548\uB0B4"),
+    /*#__PURE__*/React.createElement(Card, null,
+      /*#__PURE__*/React.createElement("div", {
+        style: {
+          fontSize: "11px",
+          color: "#666",
+          marginBottom: "8px"
+        }
+      }, "\uAD50\uC721\uC0DD\uC5D0 \uD55C\uD558\uC5EC \uC8FC\uCC28\uD560\uC778 \uB4F1\uB85D"),
+      d.parking.map(function (p, i) {
+        return /*#__PURE__*/React.createElement("div", {
+          key: i,
+          style: {
+            fontSize: "12px",
+            color: "#1a1a1a",
+            lineHeight: 1.7,
+            paddingLeft: "10px",
+            position: "relative"
+          }
+        },
+          /*#__PURE__*/React.createElement("span", {
+            style: {
+              position: "absolute",
+              left: 0,
+              color: "#999"
+            }
+          }, "\u2022"),
+          p
+        );
+      }),
+      /*#__PURE__*/React.createElement("div", {
+        style: {
+          fontSize: "11px",
+          color: "#c0392b",
+          marginTop: "10px",
+          padding: "8px 10px",
+          background: "#fff5f3",
+          borderRadius: "6px",
+          lineHeight: 1.5
+        }
+      }, "\u203B " + d.parkingNote)
+    ),
+    /*#__PURE__*/React.createElement(SubTitle, null, "KTX \uAE30\uCC28"),
+    /*#__PURE__*/React.createElement(Card, null,
+      /*#__PURE__*/React.createElement("div", {
+        style: {
+          fontSize: "11px",
+          color: "#666",
+          marginBottom: "10px"
+        }
+      }, "\uB3C4\uCC29: \uB300\uC804\uC5ED"),
+      /*#__PURE__*/React.createElement("div", {
+        style: {
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "6px 12px"
+        }
+      }, d.ktx.map(function (k, i) {
+        return /*#__PURE__*/React.createElement("div", {
+          key: i,
+          style: {
+            display: "flex",
+            justifyContent: "space-between",
+            fontSize: "12px",
+            color: "#1a1a1a",
+            padding: "4px 0",
+            borderBottom: "1px solid #f5f3ef"
+          }
+        },
+          /*#__PURE__*/React.createElement("span", { style: { fontWeight: 500 } }, k.from),
+          /*#__PURE__*/React.createElement("span", { style: { color: "#666", fontVariantNumeric: "tabular-nums" } }, k.time)
+        );
+      })),
+      /*#__PURE__*/React.createElement("div", {
+        style: {
+          fontSize: "11px",
+          color: "#666",
+          marginTop: "10px",
+          fontStyle: "italic"
+        }
+      }, d.ktxNote)
+    ),
+    /*#__PURE__*/React.createElement(SubTitle, null, "\uACE0\uC18D\uBC84\uC2A4"),
+    /*#__PURE__*/React.createElement(Card, null,
+      /*#__PURE__*/React.createElement("div", {
+        style: {
+          fontSize: "11px",
+          color: "#666",
+          marginBottom: "10px"
+        }
+      }, "\uB3C4\uCC29: \uB3C4\uB8E1\uC815\uB958\uC18C"),
+      d.bus.map(function (b, i) {
+        return /*#__PURE__*/React.createElement("div", {
+          key: i,
+          style: {
+            display: "flex",
+            justifyContent: "space-between",
+            fontSize: "12px",
+            color: "#1a1a1a",
+            padding: "4px 0",
+            borderBottom: i < d.bus.length - 1 ? "1px solid #f5f3ef" : "none"
+          }
+        },
+          /*#__PURE__*/React.createElement("span", { style: { fontWeight: 500 } }, b.from),
+          /*#__PURE__*/React.createElement("span", { style: { color: "#666", fontVariantNumeric: "tabular-nums" } }, b.time)
+        );
+      }),
+      /*#__PURE__*/React.createElement("div", {
+        style: {
+          fontSize: "11px",
+          color: "#666",
+          marginTop: "10px",
+          fontStyle: "italic"
+        }
+      }, d.busNote)
+    ),
+    /*#__PURE__*/React.createElement(SubTitle, null, "\uAD50\uC721\uC218\uB8CC \uC548\uB0B4"),
+    /*#__PURE__*/React.createElement(Card, null, data.completion.map(function (c, i) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: i,
+        style: {
+          fontSize: "12px",
+          color: "#1a1a1a",
+          lineHeight: 1.6,
+          paddingLeft: "14px",
+          position: "relative",
+          marginBottom: i < data.completion.length - 1 ? "8px" : 0
+        }
+      },
+        /*#__PURE__*/React.createElement("span", {
+          style: {
+            position: "absolute",
+            left: 0,
+            top: 0,
+            color: "#2c5f8a",
+            fontWeight: 700
+          }
+        }, "\u2022"),
+        c
+      );
+    })),
+    /*#__PURE__*/React.createElement(SubTitle, null, "\uBB38\uC758\uCC98"),
+    /*#__PURE__*/React.createElement(Card, null, data.contacts.map(function (c, i) {
+      return /*#__PURE__*/React.createElement("div", {
+        key: i,
+        style: {
+          paddingBottom: i < data.contacts.length - 1 ? "12px" : 0,
+          marginBottom: i < data.contacts.length - 1 ? "12px" : 0,
+          borderBottom: i < data.contacts.length - 1 ? "1px solid #f5f3ef" : "none"
+        }
+      },
+        /*#__PURE__*/React.createElement("div", {
+          style: {
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            marginBottom: "6px"
+          }
+        },
+          /*#__PURE__*/React.createElement("span", {
+            style: {
+              fontSize: "11px",
+              fontWeight: 700,
+              color: "#2c5f8a",
+              background: "#e8eef6",
+              padding: "2px 8px",
+              borderRadius: "4px"
+            }
+          }, c.role),
+          /*#__PURE__*/React.createElement("span", {
+            style: {
+              fontSize: "13px",
+              fontWeight: 600,
+              color: "#1a1a1a"
+            }
+          }, c.name)
+        ),
+        /*#__PURE__*/React.createElement("div", {
+          style: {
+            fontSize: "12px",
+            color: "#555",
+            lineHeight: 1.6
+          }
+        },
+          /*#__PURE__*/React.createElement("div", null, "\uD83D\uDCDE ", c.phone),
+          /*#__PURE__*/React.createElement("div", null, "\u2709\uFE0F ", c.email)
+        )
+      );
+    }))
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(Guide));
+</script>
+</body>
+</html>
